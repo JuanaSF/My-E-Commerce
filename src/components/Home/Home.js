@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Home.css';
+import CardProducto from '../CardProducto/CardProducto';
 
 
 function Home({greeting}) {
@@ -12,6 +13,13 @@ function Home({greeting}) {
                 </p>
                 <button type="button" className="btn btn-info">Buy now!</button>
             </div>       
+            <div className="container">
+                <div className="row">
+                    <CardProducto/>
+                    <CardProducto/>
+                    <CardProducto/>
+                </div>
+            </div>
         </div>
     )
 }
