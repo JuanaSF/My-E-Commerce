@@ -11,7 +11,7 @@ function CardProducto() {
                 <div className="card-body">
                 <h5 className="card-title">Remeras!</h5>
                 <p className="card-text">Remeras Lisas Mujer Manga Corta Algodón Varios Colores</p>
-                <ItemCount initial='1' min='1' max='10'/>
+                <ItemCount initial={1} min={1} max={10} />
                 <button type="button" className="btn btn-info">Añadir al carrito</button>
                 </div>
             </div>

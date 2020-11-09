@@ -7,19 +7,17 @@ const style = {
 }
 
 function ItemCount({initial, min, max}) {
-    let [count, setCount] = useState(initial);
+    const [count, setCount] = useState(initial);
 
     const sumarUnidad = () => {
         if( count < max ) {
-            count++;
-            setCount(count);
+            setCount(count+1);
         }
     }
 
     const restarUnidad = () => {
         if( count > min) {
-            count--;
-            setCount(count);
+            setCount(count-1);
         }
     }
 
