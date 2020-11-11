@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 const style = {
     display: "inline-block",
     marginLeft: "10px",
-    marginRight: "10px"
+    marginRight: "10px",
+    width: "20px"
 }
 
-function ItemCount({initial, min, max}) {
+function ItemCount({initial, min, max, onAdd}) {
     const [count, setCount] = useState(initial);
 
     const sumarUnidad = () => {
@@ -21,12 +22,19 @@ function ItemCount({initial, min, max}) {
         }
     }
 
+    const añadirAlCarrito = ()=> {
+        onAdd(count);
+    }
+
     return(
+        <>
         <div>
-            <button onClick={() => { restarUnidad()}}>-</button>
+            <button className="btn btn-secondary" onClick={() => { restarUnidad()}}>-</button>
             <div style={style}><p>{count}</p></div>
-            <button onClick={() => { sumarUnidad()}}>+</button>
+            <button className="btn btn-secondary" onClick={() => { sumarUnidad()}}>+</button>
         </div>
+            <button type="button" className="btn btn-info" onClick={() => { añadirAlCarrito()}}>Añadir al carrito</button>
+        </>
     )
 }
 
