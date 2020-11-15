@@ -22,7 +22,7 @@ function ItemCount({initial, min, max, onAdd}) {
         }
     }
 
-    const añadirAlCarrito = ()=> {
+    const aniadirAlCarrito = ()=> {
         onAdd(count);
     }
 
@@ -33,7 +33,7 @@ function ItemCount({initial, min, max, onAdd}) {
             <div style={style}><p>{count}</p></div>
             <button className="btn btn-secondary" onClick={() => { sumarUnidad()}}>+</button>
         </div>
-            <button type="button" className="btn btn-info" onClick={() => { añadirAlCarrito()}}>Añadir al carrito</button>
+            <button type="button" className="btn btn-info" onClick={() => { aniadirAlCarrito()}}>Añadir al carrito</button>
         </>
     )
 }
