@@ -1,0 +1,9 @@
+.padre {
+    height: 100vh;
+}
+
+.spinner-grow {
+    width: 10rem; 
+    height: 10rem;
+    margin: 100px;
+}
