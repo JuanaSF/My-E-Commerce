@@ -1,0 +1,15 @@
+.card-body {
+    color: black;
+}
+
+.card:hover {
+    opacity:0.60;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.precio {
+    font-size: 25px;
+}

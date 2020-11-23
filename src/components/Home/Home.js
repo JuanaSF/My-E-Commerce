@@ -29,8 +29,8 @@ function Home({greeting}) {
             <div className="container">
                 <div className="row justify-content-center">
                     {products.length === 0 ? (
-                        <div class="spinner-grow text-light" role="status">
-                            <span class="sr-only">Loading...</span>
+                        <div className="spinner-grow text-light" role="status">
+                            <span className="sr-only">Loading...</span>
                         </div>
                     ) : (
                         <ItemList productos={products}/>
