@@ -19,8 +19,6 @@ function ItemDetail({producto}) {
                     <h5 className="mb-2 text-dark">{producto.price}</h5>
                     <p>Color: {producto.color} <br></br> Unidades Disponibles: {producto.stock}</p>
                     <ItemCount initial={1} min={1} max={producto.stock} onAdd={addToCart}/>
-                    <br></br>
-                    <a href="#" className="btn btn-primary">Comprar Ahora</a>
                 </div>
             </div>
         </div>
