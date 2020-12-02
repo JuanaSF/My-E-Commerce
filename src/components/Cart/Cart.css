@@ -1,0 +1,9 @@
+.fondo {
+    background: linear-gradient(180deg, rgba(96,187,186,1) 25%, rgba(69,52,179,1) 100%);
+    padding: 10px;
+    height: 100vh;
+}
+
+.card-contenedor {
+    background-color: white;
+}

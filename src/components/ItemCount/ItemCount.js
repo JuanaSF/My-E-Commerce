@@ -33,9 +33,7 @@ function ItemCount({initial, min, max, onAdd}) {
             <div style={style}><p>{count}</p></div>
             <button className="btn btn-secondary" onClick={() => { sumarUnidad()}}>+</button>
         </div>
-            <button href="#" className="btn btn-primary my-3">Comprar {count} { count === 1 ? ('Unidad') : ('Unidades') }</button>
-            <br></br>
-            <button type="button" className="btn btn-info" onClick={() => { aniadirAlCarrito()}}>Añadir al carrito</button>
+            <button type="button" className="btn btn-info my-3" onClick={() => { aniadirAlCarrito()}}>Agregar al carrito {count} { count === 1 ? ('unidad') : ('unidades')} </button>
         </>
     )
 }
