@@ -18,7 +18,7 @@ function ItemDetailContainer() {
             })
             .then( result => {
                 result.forEach((producto) => {
-                    if(producto.id == id) {
+                    if(producto.id === id) {
                         setProducto(producto);
                         setLoading(false);
                     }

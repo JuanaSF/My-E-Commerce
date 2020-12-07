@@ -6,4 +6,9 @@
 
 .card-contenedor {
     background-color: white;
+    padding: 25px;
+}
+
+.mensaje {
+    font-family: 'Nunito', sans-serif;
 }

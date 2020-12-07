@@ -13,8 +13,6 @@ export const CartProvider = ({children}) => {
         setCantidadAgregada(cantidadAgregada + cantidad);
     }
 
-    console.log(infoCart);
-
     return <CartContext.Provider value={{infoCart, agregarProducto, cantidadAgregada}}>
         {children}
     </CartContext.Provider>
