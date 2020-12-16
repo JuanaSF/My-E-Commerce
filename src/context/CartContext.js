@@ -6,6 +6,7 @@ export const CartProvider = ({children}) => {
 
     const [infoCart, setInfoCart] = useState([]);
     const [cantidadAgregada, setCantidadAgregada] = useState(0);
+    const [categorias, setCategorias] = useState([]);
 
     const agregarProducto = (productoAgregado) => {
         setInfoCart([...infoCart, productoAgregado]);
@@ -13,7 +14,7 @@ export const CartProvider = ({children}) => {
         setCantidadAgregada(cantidadAgregada + cantidad);
     }
 
-    return <CartContext.Provider value={{infoCart, agregarProducto, cantidadAgregada}}>
+    return <CartContext.Provider value={{infoCart, agregarProducto, cantidadAgregada, categorias, setCategorias}}>
         {children}
     </CartContext.Provider>
 }

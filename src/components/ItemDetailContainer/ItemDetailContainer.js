@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import getProductsList from '../../lib/data';
 import "bootstrap/dist/css/bootstrap.min.css";
-import '../ItemDetailContainer/ItemDetailContainer.css'
+import '../ItemDetailContainer/ItemDetailContainer.css';
+import { getFirestore } from '../../firebase';
 
 function ItemDetailContainer() {
     const { id } = useParams();
@@ -12,19 +12,13 @@ function ItemDetailContainer() {
     const [loading, setLoading] = useState(true);
 
     useEffect(()=> {
-        getProductsList()
-            .then( result => {
-                return JSON.parse(result);
-            })
-            .then( result => {
-                result.forEach((producto) => {
-                    if(producto.id === id) {
-                        setProducto(producto);
-                        setLoading(false);
-                    }
-                });
-            })
-    }, [id]);
+        const db = getFirestore().collection('productos');
+        let producto = db.doc(id);
+        producto.get().then((response) => {
+            setProducto({...response.data(), id: response.id});
+            setLoading(false);
+        })
+        }, [id]);
 
     return(
         <div className="padre container">

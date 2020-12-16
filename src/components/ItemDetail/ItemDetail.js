@@ -29,7 +29,7 @@ function ItemDetail({producto}) {
             </div>
         </div>
         <div className="text-left">
-            <span className="text-dark">Descripcion del producto</span>
+            <span className="text-dark subtitle">Descripcion del producto</span>
             <p className="descripcion">{producto.description}</p>
         </div>
         </>

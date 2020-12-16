@@ -6,7 +6,7 @@ function ItemCart({producto, cantidad}) {
             </div>
             <div className="col">
                 <h4>{producto.name}</h4>
-                <p>{producto.description}</p>
+                {/* <p>{producto.description}</p> */}
                 <p>Cantidad: {cantidad}</p>
             </div>
             <div className="col text-right">
