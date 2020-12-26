@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
 import CategoriaContainer from './components/CategoriaContainer/CategoriaContainer';
+import FormCompra from './components/FormCompra/FormCompra';
 import { CartProvider } from './context/CartContext';
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
             </Route>
             <Route exact path="/cart">
               <Cart/>
+            </Route>
+            <Route exact path="/checkout/cart">
+              <FormCompra/>
             </Route>
           </Switch>
         </BrowserRouter>

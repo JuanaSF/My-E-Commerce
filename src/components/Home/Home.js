@@ -54,8 +54,8 @@ function Home({greeting}) {
                     </div>
                 ) : (<> 
                     <h3>Categorias</h3>
-                    {categorias.map( cat => {
-                        return <div className="col"><Link to={`/category/${cat.categoriaId}`}>{cat.categoriaId}</Link></div>
+                    {categorias.map( (cat, index )=> {
+                        return <div key={index} className="col"><Link to={`/category/${cat.categoriaId}`}>{cat.categoriaId}</Link></div>
                     })}
                     <div className="row">
                         <ItemList productos={products}/>

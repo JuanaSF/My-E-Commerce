@@ -20,13 +20,13 @@ function NavBar() {
                     <li className="nav-item">
                         <a className="nav-link enlace mx-3" href="#">Ofertas</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <button class="nav-link btn enlace dropdown-toggle" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li className="nav-item dropdown">
+                        <button className="nav-link btn enlace dropdown-toggle" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Categorias
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            {categorias.map( categoria => {
-                                return <Link to={`/category/${categoria.categoriaId}`}><span class="dropdown-item">{categoria.categoriaId}</span></Link>
+                        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {categorias.map( (categoria, index) => {
+                                return <Link key={index} to={`/category/${categoria.categoriaId}`}><span className="dropdown-item">{categoria.categoriaId}</span></Link>
                             })}
                         </div>
                     </li>

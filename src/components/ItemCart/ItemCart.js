@@ -10,7 +10,7 @@ function ItemCart({producto, cantidad}) {
                 <p>Cantidad: {cantidad}</p>
             </div>
             <div className="col text-right">
-                <h5>{producto.price}</h5>
+                <h5>${producto.price}</h5>
             </div>
         </div>
     )

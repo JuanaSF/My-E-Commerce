@@ -10,7 +10,7 @@ function Item({producto}) {
                     <img src={producto.img} className="card-img-top" alt="imagen del producto"></img>
                     <div className="card-body">
                     <h5 className="card-title">{producto.name}</h5>
-                    <p className="precio">$ {producto.price}</p>
+                    <p className="precio">${producto.price}</p>
                     </div>
                 </Link>
             </div>

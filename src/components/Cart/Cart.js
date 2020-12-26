@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CartContext } from "../../context/CartContext";
 import ItemCart from "../ItemCart/ItemCart";
 import '../Cart/Cart.css';
@@ -7,7 +7,16 @@ import imagen from '../../assets/img/empty-cart.png';
 
 function Cart() {
 
-    const {infoCart, cantidadAgregada} = useContext(CartContext);
+    const {infoCart, cantidadAgregada, total, setTotal} = useContext(CartContext);
+
+    useEffect(()=>{
+        let suma = 0;
+        infoCart.map( elemento => {
+            suma += (elemento.producto.price * elemento.cantidad);
+        });
+        
+        setTotal(suma);
+    }, [])
 
     return (
         <div className="fondo">
@@ -30,7 +39,12 @@ function Cart() {
                                 return <ItemCart producto={dato.producto} cantidad={dato.cantidad}/>
                             })}
                             <div className="border-top">
-                                <span>Subtotal ({cantidadAgregada} { cantidadAgregada === 1 ? ('producto') : ('productos') }): </span>
+                                <span>Subtotal ({cantidadAgregada} { cantidadAgregada === 1 ? ('producto') : ('productos') }): ${total}</span>
+                            </div>
+                            <div>
+                                <Link to={'/checkout/cart'}>
+                                    <button type="button" className="btn btn-primary btn-lg btn-block">Proceder al Pago</button>
+                                </Link>
                             </div>
                         </>
                     )
