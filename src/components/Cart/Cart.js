@@ -39,11 +39,11 @@ function Cart() {
                                 return <ItemCart producto={dato.producto} cantidad={dato.cantidad}/>
                             })}
                             <div className="border-top">
-                                <span>Subtotal ({cantidadAgregada} { cantidadAgregada === 1 ? ('producto') : ('productos') }): ${total}</span>
+                                <span className="subtotal">Subtotal ({cantidadAgregada} { cantidadAgregada === 1 ? ('producto') : ('productos') }): ${total}</span>
                             </div>
                             <div>
                                 <Link to={'/checkout/cart'}>
-                                    <button type="button" className="btn btn-primary btn-lg btn-block">Proceder al Pago</button>
+                                    <button type="button" className="btn btn-primary btn-lg btn-block mt-3">Proceder al Pago</button>
                                 </Link>
                             </div>
                         </>

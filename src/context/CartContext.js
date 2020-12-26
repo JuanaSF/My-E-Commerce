@@ -11,9 +11,22 @@ export const CartProvider = ({children}) => {
     const [total, setTotal] = useState(0)
 
     const agregarProducto = (productoAgregado) => {
-        setInfoCart([...infoCart, productoAgregado]);
+        
         const {cantidad} = productoAgregado;
-        setCantidadAgregada(cantidadAgregada + cantidad);
+
+        let productoExiste = infoCart.find( element => {
+            return element.producto.id === productoAgregado.producto.id;
+        })
+
+        if(productoExiste) {
+            productoExiste.cantidad += cantidad;
+            setInfoCart([...infoCart]);
+            setCantidadAgregada(cantidadAgregada + cantidad);
+
+        } else {
+            setInfoCart([...infoCart, productoAgregado]);
+            setCantidadAgregada(cantidadAgregada + cantidad);
+        }
     }
 
     const guardarOrden = (buyer) => {

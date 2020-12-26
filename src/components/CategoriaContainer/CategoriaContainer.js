@@ -27,7 +27,7 @@ function CategoriaContainer() {
 
     return(
         <>
-        <h1 className="text-info">{categoriaId}</h1>
+        <h1 className="text-info m-3">{categoriaId}</h1>
         <div className="row justify-content-center">
             { productList.length === 0 ? (
                 <div className="spinner-grow text-info" role="status">
