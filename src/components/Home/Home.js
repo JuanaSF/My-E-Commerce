@@ -57,7 +57,7 @@ function Home({greeting}) {
                     {categorias.map( (cat, index )=> {
                         return <div key={index} className="col"><Link to={`/category/${cat.categoriaId}`}>{cat.categoriaId}</Link></div>
                     })}
-                    <div className="row">
+                    <div className="d-flex flex-wrap">
                         <ItemList productos={products}/>
                     </div>
                     </>

@@ -36,7 +36,7 @@ function Cart() {
                                 <h1 className="text-info m-3">Carrito</h1>
                             </div>
                             {infoCart.map( dato => {
-                                return <ItemCart producto={dato.producto} cantidad={dato.cantidad}/>
+                                return <ItemCart key={dato.producto.id} producto={dato.producto} cantidad={dato.cantidad}/>
                             })}
                             <div className="border-top">
                                 <span className="subtotal">Subtotal ({cantidadAgregada} { cantidadAgregada === 1 ? ('producto') : ('productos') }): ${total}</span>

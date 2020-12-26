@@ -27,3 +27,13 @@ h1 {
     height: 10rem;
     margin: 100px;
 }
+
+.card {
+    flex: 1 350px;
+    margin: 30px 10px 30px 10px;
+}
+
+.img-card {
+    width: 250px;
+    height: 350px;
+}
