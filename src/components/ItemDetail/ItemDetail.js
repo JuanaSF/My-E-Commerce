@@ -23,7 +23,7 @@ function ItemDetail({producto}) {
                 <div className="card-body text-left">
                     <h4 className="card-title">{producto.name}</h4>
                     <h5 className="mb-2 text-dark">${producto.price}</h5>
-                    <p>Color: {producto.color} <br></br> Unidades Disponibles: {producto.stock}</p>
+                    <p>Unidades Disponibles: {producto.stock}</p>
                     <ItemCount initial={1} min={1} max={producto.stock} onAdd={addToCart}/>
                 </div>
             </div>

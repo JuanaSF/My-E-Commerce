@@ -55,7 +55,7 @@ function Home({greeting}) {
                 ) : (<> 
                     <h3>Categorias</h3>
                     {categorias.map( (cat, index )=> {
-                        return <div key={index} className="col"><Link to={`/category/${cat.categoriaId}`}>{cat.categoriaId}</Link></div>
+                        return <div key={index} className="col"><Link to={`/categories/${cat.categoriaId}`}>{cat.categoriaId}</Link></div>
                     })}
                     <div className="d-flex flex-wrap">
                         <ItemList productos={products}/>

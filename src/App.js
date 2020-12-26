@@ -18,7 +18,7 @@ function App() {
             <Route exact path="/">
               <Home greeting="Bienvenido al E-Commerce!!"/>
             </Route>
-            <Route exact path="/category/:categoriaId">
+            <Route exact path="/categories/:categoriaId">
               <CategoriaContainer/>
             </Route>
             <Route exact path="/item/:id">

@@ -29,6 +29,13 @@ export const CartProvider = ({children}) => {
         }
     }
 
+    const quitarProducto = (producto, cantidad) => {
+
+        infoCart.splice(infoCart.findIndex(element => element.producto.id === producto.id), 1);
+        setInfoCart([...infoCart]);
+        setCantidadAgregada(cantidadAgregada - cantidad);
+    }
+
     const guardarOrden = (buyer) => {
         
         let nuevaOrden = {
@@ -54,7 +61,7 @@ export const CartProvider = ({children}) => {
         }) 
     }
 
-    return <CartContext.Provider value={{infoCart, agregarProducto, cantidadAgregada, categorias, setCategorias, total, setTotal, guardarOrden}}>
+    return <CartContext.Provider value={{infoCart, agregarProducto, quitarProducto, cantidadAgregada, categorias, setCategorias, total, setTotal, guardarOrden}}>
         {children}
     </CartContext.Provider>
 }

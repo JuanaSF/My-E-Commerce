@@ -26,7 +26,7 @@ function NavBar() {
                         </button>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                             {categorias.map( (categoria, index) => {
-                                return <Link key={index} to={`/category/${categoria.categoriaId}`}><span className="dropdown-item">{categoria.categoriaId}</span></Link>
+                                return <Link key={index} to={`/categories/${categoria.categoriaId}`}><span className="dropdown-item">{categoria.categoriaId}</span></Link>
                             })}
                         </div>
                     </li>

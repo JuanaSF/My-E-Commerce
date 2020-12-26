@@ -16,7 +16,7 @@ function Cart() {
         });
         
         setTotal(suma);
-    }, [])
+    }, [infoCart])
 
     return (
         <div className="fondo">
@@ -38,7 +38,7 @@ function Cart() {
                             {infoCart.map( dato => {
                                 return <ItemCart key={dato.producto.id} producto={dato.producto} cantidad={dato.cantidad}/>
                             })}
-                            <div className="border-top">
+                            <div>
                                 <span className="subtotal">Subtotal ({cantidadAgregada} { cantidadAgregada === 1 ? ('producto') : ('productos') }): ${total}</span>
                             </div>
                             <div>
